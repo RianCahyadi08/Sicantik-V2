@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231126 10:37:32.387" rpa="false" schemaversion="4">
+<suite id="s1" name="SC01 - View Peta Sebaran by role Admin" source="C:\Users\ReiKa\PycharmProjects\Sicantik\tests\R05 - Peta Sebaran\Admin Instansi\SC01 - View Peta Sebaran by role Admin\SC01 - View Peta Sebaran by role Admin.robot">
+<test id="s1-t1" name="TC01 - View Peta Sebaran" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231126 10:37:32.542" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231126 10:37:32.542" endtime="20231126 10:37:35.888"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231126 10:37:35.888" endtime="20231126 10:37:36.003"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Username</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231126 10:37:36.003" endtime="20231126 10:37:36.011"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231126 10:37:36.011" endtime="20231126 10:37:36.012"/>
+</kw>
+<status status="PASS" starttime="20231126 10:37:32.542" endtime="20231126 10:37:36.012"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 10:37:36.013" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231126 10:37:36.012" endtime="20231126 10:37:36.373"/>
+</kw>
+<status status="PASS" starttime="20231126 10:37:36.012" endtime="20231126 10:37:36.373"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 10:37:36.373" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231126 10:37:36.373" endtime="20231126 10:37:36.727"/>
+</kw>
+<status status="PASS" starttime="20231126 10:37:36.373" endtime="20231126 10:37:36.727"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231126 10:37:36.727" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231126 10:37:36.727" endtime="20231126 10:37:37.165"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 10:37:42.166" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231126 10:37:37.165" endtime="20231126 10:37:42.166"/>
+</kw>
+<status status="PASS" starttime="20231126 10:37:36.727" endtime="20231126 10:37:42.166"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 10:37:44.166" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231126 10:37:42.166" endtime="20231126 10:37:44.166"/>
+</kw>
+<status status="PASS" starttime="20231126 10:37:36.012" endtime="20231126 10:37:44.166"/>
+</kw>
+<kw name="Move To Peta Sebaran" library="peta_sebaran">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/peta-sebaran</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231126 10:37:44.167" level="INFO">Opening url 'https://uji.sicantik.go.id/peta-sebaran'</msg>
+<status status="PASS" starttime="20231126 10:37:44.167" endtime="20231126 10:37:45.122"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 10:37:47.123" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231126 10:37:45.122" endtime="20231126 10:37:47.123"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Peta Sebaran</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231126 10:37:47.333" level="INFO">Current page contains text 'Peta Sebaran'.</msg>
+<status status="PASS" starttime="20231126 10:37:47.123" endtime="20231126 10:37:47.333"/>
+</kw>
+<status status="PASS" starttime="20231126 10:37:44.166" endtime="20231126 10:37:47.333"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231126 10:37:47.587" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231126 10:37:47.333" endtime="20231126 10:37:47.587"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231126 10:37:47.587" endtime="20231126 10:37:49.735"/>
+</kw>
+<doc>SC01 - View Peta Sebaran by role Admin</doc>
+<tag>TC01 - View Peta Sebaran</tag>
+<status status="PASS" starttime="20231126 10:37:32.542" endtime="20231126 10:37:49.735"/>
+</test>
+<doc>SC01 - View Peta Sebaran by role Admin</doc>
+<status status="PASS" starttime="20231126 10:37:32.387" endtime="20231126 10:37:49.735"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Peta Sebaran</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC01 - View Peta Sebaran by role Admin">SC01 - View Peta Sebaran by role Admin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
