@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231126 11:01:30.398" rpa="false" schemaversion="4">
+<suite id="s1" name="SC01 - View Data Desa" source="C:\Users\ReiKa\PycharmProjects\Sicantik\tests\R06 - Data Wilayah - Desa\Admin Instansi\SC01 - View Data Desa\SC01 - View Data Desa.robot">
+<test id="s1-t1" name="TC01 - View Data Desa" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231126 11:01:30.603" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231126 11:01:30.602" endtime="20231126 11:01:34.596"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231126 11:01:34.596" endtime="20231126 11:01:34.719"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Username</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231126 11:01:34.719" endtime="20231126 11:01:34.728"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231126 11:01:34.728" endtime="20231126 11:01:34.728"/>
+</kw>
+<status status="PASS" starttime="20231126 11:01:30.602" endtime="20231126 11:01:34.728"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 11:01:34.730" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231126 11:01:34.730" endtime="20231126 11:01:35.094"/>
+</kw>
+<status status="PASS" starttime="20231126 11:01:34.730" endtime="20231126 11:01:35.094"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 11:01:35.094" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231126 11:01:35.094" endtime="20231126 11:01:35.452"/>
+</kw>
+<status status="PASS" starttime="20231126 11:01:35.094" endtime="20231126 11:01:35.452"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231126 11:01:35.453" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231126 11:01:35.452" endtime="20231126 11:01:35.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 11:01:40.894" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231126 11:01:35.894" endtime="20231126 11:01:40.894"/>
+</kw>
+<status status="PASS" starttime="20231126 11:01:35.452" endtime="20231126 11:01:40.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 11:01:42.895" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231126 11:01:40.894" endtime="20231126 11:01:42.895"/>
+</kw>
+<status status="PASS" starttime="20231126 11:01:34.728" endtime="20231126 11:01:42.895"/>
+</kw>
+<kw name="Move To Desa" library="desa">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/desa</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231126 11:01:42.895" level="INFO">Opening url 'https://uji.sicantik.go.id/desa'</msg>
+<status status="PASS" starttime="20231126 11:01:42.895" endtime="20231126 11:01:43.204"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Desa</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231126 11:01:43.204" endtime="20231126 11:01:43.312"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 11:01:45.313" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231126 11:01:43.312" endtime="20231126 11:01:45.313"/>
+</kw>
+<status status="PASS" starttime="20231126 11:01:42.895" endtime="20231126 11:01:45.313"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 11:01:47.313" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231126 11:01:45.313" endtime="20231126 11:01:47.313"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231126 11:01:47.542" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231126 11:01:47.313" endtime="20231126 11:01:47.542"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231126 11:01:47.542" endtime="20231126 11:01:49.692"/>
+</kw>
+<doc>SC01 - View Data Desa</doc>
+<tag>TC01 - View Data Desa</tag>
+<status status="PASS" starttime="20231126 11:01:30.600" endtime="20231126 11:01:49.692"/>
+</test>
+<doc>SC01 - View Data Desa</doc>
+<status status="PASS" starttime="20231126 11:01:30.403" endtime="20231126 11:01:49.692"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Data Desa</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC01 - View Data Desa">SC01 - View Data Desa</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
