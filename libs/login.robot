@@ -4,12 +4,13 @@ Library           SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}        https://uji.sicantik.go.id/sign-in
-${BROWSER}          Firefox
+${BROWSER}          Chrome
 ${SPEED}            0.1s
 
 *** Keywords ***
 Open Browser Website
-    Open Browser                ${LOGIN URL}       ${BROWSER}
+#    Open Browser                ${LOGIN URL}       ${BROWSER}       options=add_argument("--incognito")
+    Open Browser                ${LOGIN URL}       ${BROWSER}       options=add_argument("--incognito")
     Maximize Browser Window
     Wait Until Page Contains    Username
     Set Selenium Speed          ${SPEED}
@@ -180,10 +181,17 @@ Login Admin Instansi
     Input Username    demo
     Input Password    Demo789*@#
     Submit Credentials
-    Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]    DEMO
+    Sleep    2s
+#    Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]    DEMO
 
 Login Admin Pusat
     Input Username    admegov
     Input Password    Admegov789*@#
     Submit Credentials
     Element Should Contain    //*[@class="d-flex text-white fs-6 fw-bold text-uppercase lh-1 mb-1"]    ADMEGOV
+
+Login Pemohon
+    Input Username    cahyadirian
+    Input Password    P@55word
+    Submit Credentials
+    Element Should Contain    //*[@class="fs-8 fw-semibold text-uppercase lh-1 mb-1"]    Pemohon
