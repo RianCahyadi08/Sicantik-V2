@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.6 on win32)" generated="20231127 18:38:01.038" rpa="false" schemaversion="4">
+<suite id="s1" name="SC01 - View Data Penomoran" source="C:\Users\asus rog\PycharmProjects\Sicantik-V2\tests\R18 - Penomoran\Admin Instansi\SC01 - View Data Penomoran\SC01 - View Data Penomoran.robot">
+<test id="s1-t1" name="TC01 - View Data Penomoran" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231127 18:38:01.226" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231127 18:38:01.226" endtime="20231127 18:38:05.899"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231127 18:38:05.899" endtime="20231127 18:38:06.040"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Username</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231127 18:38:06.040" endtime="20231127 18:38:06.052"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231127 18:38:06.052" endtime="20231127 18:38:06.052"/>
+</kw>
+<status status="PASS" starttime="20231127 18:38:01.226" endtime="20231127 18:38:06.052"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 18:38:06.056" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231127 18:38:06.056" endtime="20231127 18:38:06.486"/>
+</kw>
+<status status="PASS" starttime="20231127 18:38:06.056" endtime="20231127 18:38:06.486"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 18:38:06.486" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231127 18:38:06.486" endtime="20231127 18:38:06.918"/>
+</kw>
+<status status="PASS" starttime="20231127 18:38:06.486" endtime="20231127 18:38:06.918"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 18:38:06.918" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231127 18:38:06.918" endtime="20231127 18:38:07.416"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 18:38:12.416" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231127 18:38:07.416" endtime="20231127 18:38:12.416"/>
+</kw>
+<status status="PASS" starttime="20231127 18:38:06.918" endtime="20231127 18:38:12.416"/>
+</kw>
+<status status="PASS" starttime="20231127 18:38:06.052" endtime="20231127 18:38:12.416"/>
+</kw>
+<kw name="Move To Penomoran" library="penomoran">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/penomoran</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231127 18:38:12.416" level="INFO">Opening url 'https://uji.sicantik.go.id/penomoran'</msg>
+<status status="PASS" starttime="20231127 18:38:12.416" endtime="20231127 18:38:13.223"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Penomoran</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231127 18:38:13.223" endtime="20231127 18:38:13.359"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 18:38:15.360" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231127 18:38:13.359" endtime="20231127 18:38:15.360"/>
+</kw>
+<status status="PASS" starttime="20231127 18:38:12.416" endtime="20231127 18:38:15.360"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 18:38:17.360" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231127 18:38:15.360" endtime="20231127 18:38:17.360"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231127 18:38:17.663" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231127 18:38:17.360" endtime="20231127 18:38:17.663"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231127 18:38:17.663" endtime="20231127 18:38:19.829"/>
+</kw>
+<doc>SC01 - View Data Penomoran</doc>
+<tag>TC01 - View Data Penomoran</tag>
+<status status="PASS" starttime="20231127 18:38:01.226" endtime="20231127 18:38:19.829"/>
+</test>
+<doc>SC01 - View Data Penomoran</doc>
+<status status="PASS" starttime="20231127 18:38:01.053" endtime="20231127 18:38:19.829"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Data Penomoran</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC01 - View Data Penomoran">SC01 - View Data Penomoran</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
