@@ -4,7 +4,7 @@ Library           SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}        https://uji.sicantik.go.id/sign-in
-${BROWSER}          Chrome
+${BROWSER}          Firefox
 ${SPEED}            0.1s
 
 *** Keywords ***
