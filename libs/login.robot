@@ -181,7 +181,7 @@ Login Admin Instansi
     Input Username    demo
     Input Password    Demo789*@#
     Submit Credentials
-#    Sleep    2s
+    Sleep    2s
 #    Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]    DEMO
 
 Login Admin Pusat
