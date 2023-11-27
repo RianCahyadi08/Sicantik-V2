@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20231127 14:19:14.135" rpa="false" schemaversion="3">
+<suite id="s1" name="SC03 - Update Data Jenis Izin" source="C:\Users\Rian C\PycharmProjects\Sicantik-V2\tests\R14 - Alur Proses\Admin Instansi\SC03 - Update Data Jenis Izin\SC03 - Update Data Jenis Izin.robot">
+<test id="s1-t1" name="TC01 - Update Data Jenis Izin" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231127 14:19:14.316" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231127 14:19:14.316" endtime="20231127 14:19:17.756"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231127 14:19:17.756" endtime="20231127 14:19:17.877"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Username</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231127 14:19:17.877" endtime="20231127 14:19:17.887"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231127 14:19:17.887" endtime="20231127 14:19:17.887"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:14.315" endtime="20231127 14:19:17.887"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:17.888" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231127 14:19:17.888" endtime="20231127 14:19:18.265"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:17.888" endtime="20231127 14:19:18.265"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:18.266" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231127 14:19:18.265" endtime="20231127 14:19:18.636"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:18.265" endtime="20231127 14:19:18.636"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:18.636" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231127 14:19:18.636" endtime="20231127 14:19:19.092"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 14:19:24.093" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231127 14:19:19.092" endtime="20231127 14:19:24.093"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:18.636" endtime="20231127 14:19:24.093"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 14:19:26.093" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231127 14:19:24.093" endtime="20231127 14:19:26.093"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:17.888" endtime="20231127 14:19:26.093"/>
+</kw>
+<kw name="Move To Alur Proses Module" library="alur_proses">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/alur-proses</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231127 14:19:26.094" level="INFO">Opening url 'https://uji.sicantik.go.id/alur-proses'</msg>
+<status status="PASS" starttime="20231127 14:19:26.094" endtime="20231127 14:19:26.437"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Alur Proses</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231127 14:19:26.437" endtime="20231127 14:19:26.548"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 14:19:28.548" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231127 14:19:26.548" endtime="20231127 14:19:28.548"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:26.093" endtime="20231127 14:19:28.548"/>
+</kw>
+<kw name="Click Btn Filter" library="alur_proses">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@aria-controls="collapseBtnFilter"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 14:19:28.549" endtime="20231127 14:19:28.774"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@aria-controls="collapseBtnFilter"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:28.774" level="INFO">Clicking button '//*[@aria-controls="collapseBtnFilter"]'.</msg>
+<status status="PASS" starttime="20231127 14:19:28.774" endtime="20231127 14:19:29.338"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 14:19:29.838" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231127 14:19:29.338" endtime="20231127 14:19:29.838"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:28.549" endtime="20231127 14:19:29.838"/>
+</kw>
+<kw name="Input Alur Proses" library="alur_proses">
+<arg>namaAlurProsesUpdate</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Alur Proses"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 14:19:29.839" endtime="20231127 14:19:30.058"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Alur Proses"]</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:30.058" level="INFO">Typing text 'namaAlurProsesUpdate' into text field '//*[@placeholder="Alur Proses"]'.</msg>
+<status status="PASS" starttime="20231127 14:19:30.058" endtime="20231127 14:19:30.429"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:29.838" endtime="20231127 14:19:30.429"/>
+</kw>
+<kw name="Click Btn Tampilkan Hasil" library="alur_proses">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="btn btn-primary me-2"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 14:19:30.429" endtime="20231127 14:19:30.648"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Tampilkan hasil</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:30.648" level="INFO">Clicking button 'default:Tampilkan hasil'.</msg>
+<status status="PASS" starttime="20231127 14:19:30.648" endtime="20231127 14:19:31.110"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 14:19:33.111" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231127 14:19:31.110" endtime="20231127 14:19:33.111"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:30.429" endtime="20231127 14:19:33.111"/>
+</kw>
+<kw name="Click Icon Edit" library="alur_proses">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="far fa-edit text-success me-3 pe-auto"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 14:19:33.111" endtime="20231127 14:19:33.330"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="far fa-edit text-success me-3 pe-auto"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:33.330" level="INFO">Clicking element '//*[@class="far fa-edit text-success me-3 pe-auto"]'.</msg>
+<status status="PASS" starttime="20231127 14:19:33.330" endtime="20231127 14:19:33.575"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>UBAH ALUR PROSES</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231127 14:19:33.575" endtime="20231127 14:19:33.995"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:33.111" endtime="20231127 14:19:33.995"/>
+</kw>
+<kw name="Input Nama Alur Proses" library="alur_proses">
+<arg>namaAlurProsesSatuUpdate</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:alurProses</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 14:19:33.996" endtime="20231127 14:19:34.245"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:alurProses</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231127 14:19:34.245" endtime="20231127 14:19:34.477"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:alurProses</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:34.477" level="INFO">Typing text 'namaAlurProsesSatuUpdate' into text field 'name:alurProses'.</msg>
+<status status="PASS" starttime="20231127 14:19:34.477" endtime="20231127 14:19:34.856"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:33.995" endtime="20231127 14:19:34.856"/>
+</kw>
+<kw name="Click Btn Simpan Data" library="alur_proses">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="btn btn-primary"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 14:19:34.856" endtime="20231127 14:19:35.072"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Simpan Data</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231127 14:19:35.072" level="INFO">Clicking button 'default:Simpan Data'.</msg>
+<status status="PASS" starttime="20231127 14:19:35.072" endtime="20231127 14:19:35.526"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 14:19:42.526" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20231127 14:19:35.526" endtime="20231127 14:19:42.526"/>
+</kw>
+<status status="PASS" starttime="20231127 14:19:34.856" endtime="20231127 14:19:42.526"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231127 14:19:44.528" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231127 14:19:42.526" endtime="20231127 14:19:44.528"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231127 14:19:44.796" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231127 14:19:44.528" endtime="20231127 14:19:44.796"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231127 14:19:44.797" endtime="20231127 14:19:46.941"/>
+</kw>
+<doc>SC03 - Update Data Jenis Izin</doc>
+<tag>TC01 - Update Data Jenis Izin</tag>
+<status status="PASS" starttime="20231127 14:19:14.315" endtime="20231127 14:19:46.941"/>
+</test>
+<doc>SC03 - Update Data Jenis Izin</doc>
+<status status="PASS" starttime="20231127 14:19:14.137" endtime="20231127 14:19:46.943"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - Update Data Jenis Izin</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC03 - Update Data Jenis Izin">SC03 - Update Data Jenis Izin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
