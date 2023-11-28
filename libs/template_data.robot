@@ -40,6 +40,7 @@ Move To Add Template Data
 
 Input Nama Template Data
     Wait Until Element Is Visible    //*[@placeholder="Masukan Nama Template Data"]
+    Clear Element Text    //*[@placeholder="Masukan Nama Template Data"]
     [Arguments]     ${param}
     Input Text    //*[@placeholder="Masukan Nama Template Data"]    ${param}
 #    Click Element    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[3]/div[1]/label
