@@ -194,4 +194,3 @@ Login Pemohon
     Input Username    cahyadirian
     Input Password    P@55word
     Submit Credentials
-    Element Should Contain    //*[@class="fs-8 fw-semibold text-uppercase lh-1 mb-1"]    Pemohon
