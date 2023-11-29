@@ -48,12 +48,19 @@ Kirim Ulang Email Konfirmasi
 Click Btn Reset
     Wait Until Element Is Visible    //*[@class="btn btn-primary"]
     Click Button    //*[@class="btn btn-primary"]
-    Sleep    1s
+    Sleep    4s
 
 Logout
     Click Element    //*[@class="bi bi-box-arrow-left text-white fs-2"]
     Wait Until Page Contains    Apakah anda yakin?
     Press Keys      None    ENTER
+
+Logout Pemohon
+    Wait Until Element Is Visible    //*[@class="profile-images mb-2"]
+    Click Element    //*[@class="profile-images mb-2"]
+    Wait Until Element Is Visible    //*[@id="kt_header_user_menu_toggle"]/div[3]/div[4]/a
+    Click Element    //*[@id="kt_header_user_menu_toggle"]/div[3]/div[4]/a
+    Wait Until Page Contains    Username
 
 #Registration
 Registrasi
