@@ -5,7 +5,7 @@ Library           SeleniumLibrary
 *** Variables ***
 ${LOGIN URL}        https://uji.sicantik.go.id/sign-in
 ${BROWSER}          Chrome
-${SPEED}            0.2s
+${SPEED}            0.1s
 
 *** Keywords ***
 Open Browser Website
@@ -191,6 +191,7 @@ Login Admin Pusat
     Element Should Contain    //*[@class="d-flex text-white fs-6 fw-bold text-uppercase lh-1 mb-1"]    ADMEGOV
 
 Login Pemohon
-    Input Username    cahyadirian
-    Input Password    P@55word
+    Input Username    kartu1
+    Input Password    Kartu123*@#
     Submit Credentials
+    Sleep    2s
