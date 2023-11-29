@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20231129 10:31:58.610" rpa="false" schemaversion="3">
+<suite id="s1" name="SC01 - View Profile dan Permohonan by role User" source="C:\Users\Rian C\PycharmProjects\Sicantik-V2\tests\Pemohon\R05 - Profile dan Permohonan Izin\SC01 - View Profile dan Permohonan by role User\SC01 - View Profile dan Permohonan by role User.robot">
+<test id="s1-t1" name="TC01 - View Profile dan Permohonan" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231129 10:31:58.793" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231129 10:31:58.792" endtime="20231129 10:32:03.033"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231129 10:32:03.033" endtime="20231129 10:32:03.151"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Username</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:32:03.151" endtime="20231129 10:32:03.161"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231129 10:32:03.161" endtime="20231129 10:32:03.161"/>
+</kw>
+<status status="PASS" starttime="20231129 10:31:58.792" endtime="20231129 10:32:03.161"/>
+</kw>
+<kw name="Login Pemohon" library="login">
+<kw name="Input Username" library="login">
+<arg>kartu1</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231129 10:32:03.162" level="INFO">Typing text 'kartu1' into text field 'username'.</msg>
+<status status="PASS" starttime="20231129 10:32:03.162" endtime="20231129 10:32:03.543"/>
+</kw>
+<status status="PASS" starttime="20231129 10:32:03.162" endtime="20231129 10:32:03.543"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Kartu123*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231129 10:32:03.543" level="INFO">Typing text 'Kartu123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231129 10:32:03.543" endtime="20231129 10:32:03.914"/>
+</kw>
+<status status="PASS" starttime="20231129 10:32:03.543" endtime="20231129 10:32:03.914"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231129 10:32:03.914" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231129 10:32:03.914" endtime="20231129 10:32:04.370"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:32:09.371" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231129 10:32:04.370" endtime="20231129 10:32:09.371"/>
+</kw>
+<status status="PASS" starttime="20231129 10:32:03.914" endtime="20231129 10:32:09.371"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:32:11.371" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231129 10:32:09.371" endtime="20231129 10:32:11.371"/>
+</kw>
+<status status="PASS" starttime="20231129 10:32:03.162" endtime="20231129 10:32:11.371"/>
+</kw>
+<kw name="Move To Profile dan Permohonan Izin" library="profile_permohonan_izin">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/profile/pemohon/daftar-permohonan/permohonan</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231129 10:32:11.372" level="INFO">Opening url 'https://uji.sicantik.go.id/profile/pemohon/daftar-permohonan/permohonan'</msg>
+<status status="PASS" starttime="20231129 10:32:11.372" endtime="20231129 10:32:11.682"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Permohonan</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:32:11.682" endtime="20231129 10:32:12.100"/>
+</kw>
+<status status="PASS" starttime="20231129 10:32:11.372" endtime="20231129 10:32:12.100"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:32:14.101" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231129 10:32:12.101" endtime="20231129 10:32:14.101"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231129 10:32:14.349" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231129 10:32:14.101" endtime="20231129 10:32:14.349"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231129 10:32:14.349" endtime="20231129 10:32:16.497"/>
+</kw>
+<doc>SC01 - View Profile dan Permohonan by role User</doc>
+<tag>TC01 - View Daftar Aduan</tag>
+<status status="PASS" starttime="20231129 10:31:58.792" endtime="20231129 10:32:16.498"/>
+</test>
+<doc>SC01 - View Profile dan Permohonan by role User</doc>
+<status status="PASS" starttime="20231129 10:31:58.611" endtime="20231129 10:32:16.499"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Daftar Aduan</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC01 - View Profile dan Permohonan by role User">SC01 - View Profile dan Permohonan by role User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

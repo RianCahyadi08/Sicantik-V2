@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20231129 10:57:36.072" rpa="false" schemaversion="3">
+<suite id="s1" name="SC03 - View bagian Perusahaan" source="C:\Users\Rian C\PycharmProjects\Sicantik-V2\tests\Pemohon\R05 - Profile dan Permohonan Izin\SC03 - View bagian Perusahaan\SC03 - View bagian Perusahaan.robot">
+<test id="s1-t1" name="TC01 - View Perusahaan" line="8">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231129 10:57:36.241" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231129 10:57:36.241" endtime="20231129 10:57:40.393"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231129 10:57:40.394" endtime="20231129 10:57:40.521"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Username</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:57:40.521" endtime="20231129 10:57:40.531"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231129 10:57:40.531" endtime="20231129 10:57:40.531"/>
+</kw>
+<status status="PASS" starttime="20231129 10:57:36.240" endtime="20231129 10:57:40.531"/>
+</kw>
+<kw name="Login Pemohon" library="login">
+<kw name="Input Username" library="login">
+<arg>kartu1</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231129 10:57:40.532" level="INFO">Typing text 'kartu1' into text field 'username'.</msg>
+<status status="PASS" starttime="20231129 10:57:40.532" endtime="20231129 10:57:40.911"/>
+</kw>
+<status status="PASS" starttime="20231129 10:57:40.532" endtime="20231129 10:57:40.911"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Kartu123*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231129 10:57:40.912" level="INFO">Typing text 'Kartu123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231129 10:57:40.911" endtime="20231129 10:57:41.285"/>
+</kw>
+<status status="PASS" starttime="20231129 10:57:40.911" endtime="20231129 10:57:41.285"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231129 10:57:41.285" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231129 10:57:41.285" endtime="20231129 10:57:41.734"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:57:46.734" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231129 10:57:41.734" endtime="20231129 10:57:46.734"/>
+</kw>
+<status status="PASS" starttime="20231129 10:57:41.285" endtime="20231129 10:57:46.734"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:57:48.735" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231129 10:57:46.734" endtime="20231129 10:57:48.735"/>
+</kw>
+<status status="PASS" starttime="20231129 10:57:40.532" endtime="20231129 10:57:48.735"/>
+</kw>
+<kw name="Move To Profile dan Permohonan Izin" library="profile_permohonan_izin">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/profile/pemohon/daftar-permohonan/permohonan</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231129 10:57:48.736" level="INFO">Opening url 'https://uji.sicantik.go.id/profile/pemohon/daftar-permohonan/permohonan'</msg>
+<status status="PASS" starttime="20231129 10:57:48.736" endtime="20231129 10:57:49.141"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Permohonan</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:57:49.141" endtime="20231129 10:57:49.559"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:57:50.559" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231129 10:57:49.559" endtime="20231129 10:57:50.559"/>
+</kw>
+<status status="PASS" starttime="20231129 10:57:48.735" endtime="20231129 10:57:50.559"/>
+</kw>
+<kw name="Move To Profile dan Perusahaan" library="profile_permohonan_izin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@href="/profile/pemohon/daftar-permohonan/perusahaan"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231129 10:57:50.560" endtime="20231129 10:57:50.782"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@href="/profile/pemohon/daftar-permohonan/perusahaan"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231129 10:57:50.782" level="INFO">Clicking element '//*[@href="/profile/pemohon/daftar-permohonan/perusahaan"]'.</msg>
+<status status="PASS" starttime="20231129 10:57:50.782" endtime="20231129 10:57:51.027"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Perusahaan</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:57:51.027" endtime="20231129 10:57:51.463"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:57:52.463" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231129 10:57:51.463" endtime="20231129 10:57:52.463"/>
+</kw>
+<status status="PASS" starttime="20231129 10:57:50.559" endtime="20231129 10:57:52.463"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:57:54.465" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231129 10:57:52.463" endtime="20231129 10:57:54.465"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231129 10:57:54.694" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231129 10:57:54.465" endtime="20231129 10:57:54.694"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231129 10:57:54.696" endtime="20231129 10:57:56.842"/>
+</kw>
+<doc>SC03 - View bagian Perusahaan</doc>
+<tag>TC01 - View Daftar Aduan</tag>
+<status status="PASS" starttime="20231129 10:57:36.240" endtime="20231129 10:57:56.842"/>
+</test>
+<test id="s1-t2" name="TC02 - View Detail Data Perusahaan" line="19">
+<kw name="Open Browser Website" library="login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231129 10:57:56.844" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231129 10:57:56.844" endtime="20231129 10:57:59.992"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231129 10:57:59.992" endtime="20231129 10:58:00.203"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Username</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:58:00.203" endtime="20231129 10:58:00.313"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231129 10:58:00.313" endtime="20231129 10:58:00.313"/>
+</kw>
+<status status="PASS" starttime="20231129 10:57:56.843" endtime="20231129 10:58:00.313"/>
+</kw>
+<kw name="Login Pemohon" library="login">
+<kw name="Input Username" library="login">
+<arg>kartu1</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231129 10:58:00.314" level="INFO">Typing text 'kartu1' into text field 'username'.</msg>
+<status status="PASS" starttime="20231129 10:58:00.314" endtime="20231129 10:58:00.702"/>
+</kw>
+<status status="PASS" starttime="20231129 10:58:00.314" endtime="20231129 10:58:00.702"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Kartu123*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231129 10:58:00.702" level="INFO">Typing text 'Kartu123*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231129 10:58:00.702" endtime="20231129 10:58:01.071"/>
+</kw>
+<status status="PASS" starttime="20231129 10:58:00.702" endtime="20231129 10:58:01.071"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231129 10:58:01.072" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231129 10:58:01.071" endtime="20231129 10:58:01.521"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:58:06.522" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231129 10:58:01.521" endtime="20231129 10:58:06.522"/>
+</kw>
+<status status="PASS" starttime="20231129 10:58:01.071" endtime="20231129 10:58:06.522"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:58:08.522" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231129 10:58:06.522" endtime="20231129 10:58:08.522"/>
+</kw>
+<status status="PASS" starttime="20231129 10:58:00.313" endtime="20231129 10:58:08.522"/>
+</kw>
+<kw name="Move To Profile dan Permohonan Izin" library="profile_permohonan_izin">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/profile/pemohon/daftar-permohonan/permohonan</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231129 10:58:08.523" level="INFO">Opening url 'https://uji.sicantik.go.id/profile/pemohon/daftar-permohonan/permohonan'</msg>
+<status status="PASS" starttime="20231129 10:58:08.522" endtime="20231129 10:58:08.848"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Permohonan</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:58:08.848" endtime="20231129 10:58:09.268"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:58:10.268" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231129 10:58:09.268" endtime="20231129 10:58:10.268"/>
+</kw>
+<status status="PASS" starttime="20231129 10:58:08.522" endtime="20231129 10:58:10.268"/>
+</kw>
+<kw name="Move To Profile dan Perusahaan" library="profile_permohonan_izin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@href="/profile/pemohon/daftar-permohonan/perusahaan"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231129 10:58:10.268" endtime="20231129 10:58:10.489"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@href="/profile/pemohon/daftar-permohonan/perusahaan"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231129 10:58:10.489" level="INFO">Clicking element '//*[@href="/profile/pemohon/daftar-permohonan/perusahaan"]'.</msg>
+<status status="PASS" starttime="20231129 10:58:10.489" endtime="20231129 10:58:10.731"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Perusahaan</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:58:10.731" endtime="20231129 10:58:10.841"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:58:11.842" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231129 10:58:10.841" endtime="20231129 10:58:11.842"/>
+</kw>
+<status status="PASS" starttime="20231129 10:58:10.268" endtime="20231129 10:58:11.842"/>
+</kw>
+<kw name="Detail Perusahaan" library="profile_permohonan_izin">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="fas fa-eye"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231129 10:58:11.842" endtime="20231129 10:58:12.062"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="fas fa-eye"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231129 10:58:12.062" level="INFO">Clicking element '//*[@class="fas fa-eye"]'.</msg>
+<status status="PASS" starttime="20231129 10:58:12.062" endtime="20231129 10:58:12.305"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Detail Perusahaan</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231129 10:58:12.305" endtime="20231129 10:58:12.415"/>
+</kw>
+<status status="PASS" starttime="20231129 10:58:11.842" endtime="20231129 10:58:12.415"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231129 10:58:14.416" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231129 10:58:12.415" endtime="20231129 10:58:14.416"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231129 10:58:14.648" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231129 10:58:14.416" endtime="20231129 10:58:14.648"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231129 10:58:14.648" endtime="20231129 10:58:16.780"/>
+</kw>
+<doc>SC03 - View bagian Perusahaan</doc>
+<tag>TC02 - View Detail Data Perusahaan</tag>
+<status status="PASS" starttime="20231129 10:57:56.843" endtime="20231129 10:58:16.780"/>
+</test>
+<doc>SC03 - View bagian Perusahaan</doc>
+<status status="PASS" starttime="20231129 10:57:36.073" endtime="20231129 10:58:16.781"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Daftar Aduan</stat>
+<stat pass="1" fail="0" skip="0">TC02 - View Detail Data Perusahaan</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="SC03 - View bagian Perusahaan">SC03 - View bagian Perusahaan</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
